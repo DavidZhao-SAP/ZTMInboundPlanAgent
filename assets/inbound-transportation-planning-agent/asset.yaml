@@ -1,0 +1,53 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: agent
+
+metadata:
+  name: inbound-transportation-planning-agent
+  description: AI agent that facilitates end-to-end inbound transportation planning in SAP S/4HANA TM, supporting both instruction-based and document-based mass planning modes for Transportation Planners and Logistics Coordinators.
+
+provides:
+  apis:
+    - name: inbound-transportation-planning-agent
+      kind: a2a
+      ordId: customer.build:apiResource:inbound-transport-planning-1cf11.inbound-transportation-planning-agent:v1
+
+container:
+  buildPath: .
+  port: 5000
+
+probes:
+  startup:
+    path: /.well-known/agent.json
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 18
+  liveness:
+    path: /.well-known/agent.json
+    initialDelaySeconds: 15
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  readiness:
+    path: /.well-known/agent.json
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 3
+
+requires:
+  - name: sap-s4-ce-freightunit-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:inbound-transport-planning-1cf11.sap-s4-ce-freightunit-0001-mcp-server:v1
+  - name: sap-s4-ce-freightbooking-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:inbound-transport-planning-1cf11.sap-s4-ce-freightbooking-0001-mcp-server:v1
+  - name: sap-s4-ce-freightagreement-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:inbound-transport-planning-1cf11.sap-s4-ce-freightagreement-0001-mcp-server:v1
+  - name: sap-s4-ce-consolidationselection-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:inbound-transport-planning-1cf11.sap-s4-ce-consolidationselection-0001-mcp-server:v1
+  - name: sap-s4-ce-freightorder-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:inbound-transport-planning-1cf11.sap-s4-ce-freightorder-0001-mcp-server:v1

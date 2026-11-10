@@ -1,0 +1,21 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: mcp-server
+
+metadata:
+  name: sap-s4-ce-freightunit-0001-mcp-server
+  description: Exposes SAP S/4HANA Freight Unit (CE_FREIGHTUNIT_0001) OData API as MCP tools for searching and reading Freight Units by PO, Inbound Delivery, plant, and dates.
+  version: "1.0.0"
+  translation: mcp-translation/translation.json
+  apiSpec: mcp-translation/api-spec.edmx
+
+provides:
+  apis:
+    - name: sap-s4-ce-freightunit-0001-mcp-server
+      kind: mcp-server
+      ordId: customer.build:apiResource:inbound-transport-planning-1cf11.sap-s4-ce-freightunit-0001-mcp-server:v1
+
+requires:
+  - name: CE_FREIGHTUNIT_0001
+    kind: api
+    ordId: sap.s4:apiResource:CE_FREIGHTUNIT_0001:v1

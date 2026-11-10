@@ -1,0 +1,418 @@
+{
+  "servers": {
+    "s4-freightunit": {
+      "mcp_server_name": "sap.s4/CE_FREIGHTUNIT_0001",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "odata.metadata": "https://example.sap.com/sap/opu/odata/sap/$metadata"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "responses": []
+          }
+        },
+        "list_freightunit_for_sap_self": {
+          "description": "Retrieve a list of entities from the FreightUnit collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "TransportationOrderUUID": "fu-uuid-0001",
+                "FreightUnitDocumentNumber": "0000000001",
+                "ShipToLocationID": "PLANT1000",
+                "OriginalDocumentID": "4500012345",
+                "RequestedDeliveryDate": "/Date(1748736000000)/",
+                "GrossWeight": "1000.000",
+                "GrossWeightUnit": "KG"
+              }
+            ]
+          }
+        },
+        "get_freightunit_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the FreightUnit collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "TransportationOrderUUID": "fu-uuid-0001",
+            "FreightUnitDocumentNumber": "0000000001",
+            "ShipToLocationID": "PLANT1000",
+            "OriginalDocumentID": "4500012345",
+            "RequestedDeliveryDate": "/Date(1748736000000)/",
+            "GrossWeight": "1000.000",
+            "GrossWeightUnit": "KG"
+          }
+        }
+      }
+    },
+    "s4-freightbooking": {
+      "mcp_server_name": "sap.s4/CE_FREIGHTBOOKING_0001",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "odata.metadata": "https://example.sap.com/sap/opu/odata/sap/$metadata"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "responses": []
+          }
+        },
+        "list_freightbooking_for_sap_self": {
+          "description": "Retrieve a list of entities from the FreightBooking collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "TransportationOrderUUID": "fb-uuid-0001",
+                "FreightBookingDocumentNumber": "0000000001",
+                "CarrierID": "CARRIER01",
+                "TranspOrdProcLifecycleStatus": "01",
+                "TransportMode": "10"
+              }
+            ]
+          }
+        },
+        "update_freightbooking_for_sap_self": {
+          "description": "Update an entity in FreightBooking EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "TransportationOrderUUID": "fb-uuid-0001",
+            "FreightBookingDocumentNumber": "0000000001",
+            "CarrierID": "CARRIER01",
+            "TranspOrdProcLifecycleStatus": "01",
+            "TransportMode": "10"
+          }
+        },
+        "get_freightbooking_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the FreightBooking collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "TransportationOrderUUID": "fb-uuid-0001",
+            "FreightBookingDocumentNumber": "0000000001",
+            "CarrierID": "CARRIER01",
+            "TranspOrdProcLifecycleStatus": "01",
+            "TransportMode": "10"
+          }
+        },
+        "list_freightbookingstage_for_sap_self": {
+          "description": "Retrieve a list of entities from the FreightBookingStage collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "TransportationOrderStageUUID": "fbs-uuid-0001",
+                "TransportationOrderUUID": "fb-uuid-0001",
+                "DepartureLocationID": "CNSHA",
+                "ArrivalLocationID": "DEHAM",
+                "PlannedDepartureDateTime": "/Date(1748736000000)/",
+                "PlannedArrivalDateTime": "/Date(1751328000000)/",
+                "InvoicingCarrierID": "CARRIER01"
+              }
+            ]
+          }
+        },
+        "update_freightbookingstage_for_sap_self": {
+          "description": "Update an entity in FreightBookingStage EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "TransportationOrderStageUUID": "fbs-uuid-0001",
+            "TransportationOrderUUID": "fb-uuid-0001",
+            "DepartureLocationID": "CNSHA",
+            "ArrivalLocationID": "DEHAM",
+            "PlannedDepartureDateTime": "/Date(1748736000000)/",
+            "PlannedArrivalDateTime": "/Date(1751328000000)/",
+            "InvoicingCarrierID": "CARRIER01"
+          }
+        },
+        "create_freightbooking__freightbookingitem_for_sap_self": {
+          "description": "Create a new entity in the contained _FreightBookingItem entity set in the sap_self service. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "TransportationOrderUUID": "fb-uuid-0001",
+            "FreightBookingDocumentNumber": "0000000001",
+            "CarrierID": "CARRIER01",
+            "TranspOrdProcLifecycleStatus": "01",
+            "TransportMode": "10"
+          }
+        },
+        "action_assignfreightunit_on_sap_self_freightbooking_type": {
+          "description": "OData bound action: AssignFreightUnit on entity SAP__self.FreightBooking_Type in the sap_self service",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "SAP__Messages": []
+          }
+        },
+        "action_createfreightbooking_on_sap_self_freightbooking_type": {
+          "description": "OData bound action: CreateFreightBooking on entity SAP__self.FreightBooking_Type in the sap_self service. Returns: SAP__self.FreightBooking_Type",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "TransportationOrderUUID": "fb-uuid-0001",
+            "FreightBookingDocumentNumber": "0000000001",
+            "SAP__Messages": []
+          }
+        }
+      }
+    },
+    "s4-freightagreement": {
+      "mcp_server_name": "sap.s4/CE_FREIGHTAGREEMENT_0001",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "odata.metadata": "https://example.sap.com/sap/opu/odata/sap/$metadata"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "responses": []
+          }
+        },
+        "list_freightagreement_for_sap_self": {
+          "description": "Retrieve a list of entities from the FreightAgreement collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "FreightAgreementUUID": "fa-uuid-0001",
+                "FreightAgreementID": "FA-2024-001",
+                "CarrierID": "CARRIER01",
+                "CarrierName": "Ocean Shipping Co.",
+                "ValidityStartDate": "/Date(1704067200000)/",
+                "ValidityEndDate": "/Date(1767225600000)/",
+                "TransportMode": "10",
+                "LifeCycleStatus": "02"
+              }
+            ]
+          }
+        },
+        "get_freightagreement_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the FreightAgreement collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "FreightAgreementUUID": "fa-uuid-0001",
+            "FreightAgreementID": "FA-2024-001",
+            "CarrierID": "CARRIER01",
+            "CarrierName": "Ocean Shipping Co.",
+            "ValidityStartDate": "/Date(1704067200000)/",
+            "ValidityEndDate": "/Date(1767225600000)/",
+            "TransportMode": "10",
+            "LifeCycleStatus": "02"
+          }
+        }
+      }
+    },
+    "s4-consolidationselection": {
+      "mcp_server_name": "sap.s4/CE_CONSOLIDATIONSELECTION_0001",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "odata.metadata": "https://example.sap.com/sap/opu/odata/sap/$metadata"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "responses": []
+          }
+        },
+        "list_consolidationselection_for_sap_self": {
+          "description": "Retrieve a list of entities from the ConsolidationSelection collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "ConsolidationSelectionUUID": "cs-uuid-0001",
+                "ConsolidationSelectionID": "CS-001",
+                "Description": "Test Consolidation"
+              }
+            ]
+          }
+        },
+        "function_consume_on_sap_self_consolidationselection_type": {
+          "description": "OData bound function: Consume on entity SAP__self.ConsolidationSelection_Type in the sap_self service. Returns: Collection(SAP__self.ConsolidationSelectionConsumeResult_Type)",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "SAP__Messages": []
+          }
+        }
+      }
+    },
+    "s4-freightorder": {
+      "mcp_server_name": "sap.s4/CE_FREIGHTORDER_0001",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "odata.metadata": "https://example.sap.com/sap/opu/odata/sap/$metadata"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "responses": []
+          }
+        },
+        "list_freightorder_for_sap_self": {
+          "description": "Retrieve a list of entities from the FreightOrder collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "TransportationOrderUUID": "fo-uuid-0001",
+                "FreightOrderDocumentNumber": "0000000001",
+                "CarrierID": "CARRIER01"
+              }
+            ]
+          }
+        },
+        "get_freightorder_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the FreightOrder collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "TransportationOrderUUID": "fo-uuid-0001",
+            "FreightOrderDocumentNumber": "0000000001",
+            "CarrierID": "CARRIER01"
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "inbound-transportation-planning-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 5,
+    "total_tools": 26,
+    "generated_from": [
+      "translation.json"
+    ],
+    "generation_date": "2026-11-10"
+  }
+}

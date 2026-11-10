@@ -1,0 +1,1789 @@
+[
+  {
+    "name": "get_metadata_sap_self",
+    "title": "get_metadata_sap_self",
+    "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+    "odataType": {
+      "metadataRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "batch_for_sap_self",
+    "title": "batch_for_sap_self",
+    "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+    "odataType": {
+      "batchRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "list_cnsldtnselectioncondition_for_sap_self",
+    "title": "list_CnsldtnSelectionCondition_for_sap_self",
+    "description": "Retrieve a list of entities from the CnsldtnSelectionCondition collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CnsldtnSelectionCondition",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "search"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "get_cnsldtnselectioncondition_for_sap_self",
+    "title": "get_CnsldtnSelectionCondition_for_sap_self",
+    "description": "Retrieve a single entity by its key from the CnsldtnSelectionCondition collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CnsldtnSelectionCondition",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection"
+          },
+          {
+            "name": "FinSelectionConditionSequence",
+            "newParameterName": "finselectionconditionsequence"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_cnsldtnselectioncondition_for_sap_self",
+    "title": "count_CnsldtnSelectionCondition_for_sap_self",
+    "description": "Get the total count of entities in the CnsldtnSelectionCondition collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CnsldtnSelectionCondition",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_consolidationselection_for_sap_self",
+    "title": "list_ConsolidationSelection_for_sap_self",
+    "description": "Retrieve a list of entities from the ConsolidationSelection collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "search"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "get_consolidationselection_for_sap_self",
+    "title": "get_ConsolidationSelection_for_sap_self",
+    "description": "Retrieve a single entity by its key from the ConsolidationSelection collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_consolidationselection_for_sap_self",
+    "title": "count_ConsolidationSelection_for_sap_self",
+    "description": "Get the total count of entities in the ConsolidationSelection collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_consolidationselectiontext_for_sap_self",
+    "title": "list_ConsolidationSelectionText_for_sap_self",
+    "description": "Retrieve a list of entities from the ConsolidationSelectionText collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelectionText",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "search"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "get_consolidationselectiontext_for_sap_self",
+    "title": "get_ConsolidationSelectionText_for_sap_self",
+    "description": "Retrieve a single entity by its key from the ConsolidationSelectionText collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelectionText",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          },
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_consolidationselectiontext_for_sap_self",
+    "title": "count_ConsolidationSelectionText_for_sap_self",
+    "description": "Get the total count of entities in the ConsolidationSelectionText collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelectionText",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_consolidationselection__selectioncondition_for_sap_self",
+    "title": "list_ConsolidationSelection__SelectionCondition_for_sap_self",
+    "description": "Retrieve a collection of contained entities from the _SelectionCondition contained entity set (accessed via navigation path: ConsolidationSelection → _SelectionCondition) in the sap_self service. Supports OData query options for filtering, sorting, and pagination.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "navigationProperty": {
+          "name": "_SelectionCondition",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection_consolidationselection"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "get_consolidationselection__selectioncondition_for_sap_self",
+    "title": "get_ConsolidationSelection__SelectionCondition_for_sap_self",
+    "description": "Retrieve a single contained entity by its key from the _SelectionCondition contained entity set in the sap_self service. Provide all ancestor and entity key values to identify the specific entity.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "navigationProperty": {
+          "name": "_SelectionCondition",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "ConsolidationSelection",
+              "newParameterName": "selectioncondition_consolidationselection"
+            },
+            {
+              "name": "FinSelectionConditionSequence",
+              "newParameterName": "selectioncondition_finselectionconditionsequence"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection_consolidationselection"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_consolidationselection__selectioncondition_for_sap_self",
+    "title": "count_ConsolidationSelection__SelectionCondition_for_sap_self",
+    "description": "Count the number of entities in the contained _SelectionCondition entity set in the sap_self service. Optionally use $filter to count only entities matching specific criteria.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "navigationProperty": {
+          "name": "_SelectionCondition",
+          "crudOperation": "count",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection_consolidationselection"
+          },
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "list_consolidationselection__text_for_sap_self",
+    "title": "list_ConsolidationSelection__Text_for_sap_self",
+    "description": "Retrieve a collection of contained entities from the _Text contained entity set (accessed via navigation path: ConsolidationSelection → _Text) in the sap_self service. Supports OData query options for filtering, sorting, and pagination.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "navigationProperty": {
+          "name": "_Text",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection_consolidationselection"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "get_consolidationselection__text_for_sap_self",
+    "title": "get_ConsolidationSelection__Text_for_sap_self",
+    "description": "Retrieve a single contained entity by its key from the _Text contained entity set in the sap_self service. Provide all ancestor and entity key values to identify the specific entity.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "navigationProperty": {
+          "name": "_Text",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "Language",
+              "newParameterName": "text_language"
+            },
+            {
+              "name": "ConsolidationSelection",
+              "newParameterName": "text_consolidationselection"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection_consolidationselection"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "count_consolidationselection__text_for_sap_self",
+    "title": "count_ConsolidationSelection__Text_for_sap_self",
+    "description": "Count the number of entities in the contained _Text entity set in the sap_self service. Optionally use $filter to count only entities matching specific criteria.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "navigationProperty": {
+          "name": "_Text",
+          "crudOperation": "count",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection_consolidationselection"
+          },
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "get__selection_in_cnsldtnselectioncondition_for_sap_self",
+    "title": "get__Selection_in_CnsldtnSelectionCondition_for_sap_self",
+    "description": "Navigate from CnsldtnSelectionCondition to the related ConsolidationSelection_Type entity via the '_Selection' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CnsldtnSelectionCondition",
+        "navigationProperty": {
+          "name": "_Selection",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection"
+          },
+          {
+            "name": "FinSelectionConditionSequence",
+            "newParameterName": "finselectionconditionsequence"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update__selection_in_cnsldtnselectioncondition_for_sap_self",
+    "title": "update__Selection_in_CnsldtnSelectionCondition_for_sap_self",
+    "description": "Update the ConsolidationSelection_Type entity navigated from CnsldtnSelectionCondition via the '_Selection' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "CnsldtnSelectionCondition",
+        "navigationProperty": {
+          "name": "_Selection",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "SAP__Messages",
+              "newParameterName": "sap_messages"
+            },
+            {
+              "name": "_SelectionCondition",
+              "newParameterName": "selectioncondition"
+            },
+            {
+              "name": "_Text",
+              "newParameterName": "text"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection"
+          },
+          {
+            "name": "FinSelectionConditionSequence",
+            "newParameterName": "finselectionconditionsequence"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "get__selection_in_consolidationselectiontext_for_sap_self",
+    "title": "get__Selection_in_ConsolidationSelectionText_for_sap_self",
+    "description": "Navigate from ConsolidationSelectionText to the related ConsolidationSelection_Type entity via the '_Selection' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelectionText",
+        "navigationProperty": {
+          "name": "_Selection",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          },
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  },
+  {
+    "name": "update__selection_in_consolidationselectiontext_for_sap_self",
+    "title": "update__Selection_in_ConsolidationSelectionText_for_sap_self",
+    "description": "Update the ConsolidationSelection_Type entity navigated from ConsolidationSelectionText via the '_Selection' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelectionText",
+        "navigationProperty": {
+          "name": "_Selection",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "SAP__Messages",
+              "newParameterName": "sap_messages"
+            },
+            {
+              "name": "_SelectionCondition",
+              "newParameterName": "selectioncondition"
+            },
+            {
+              "name": "_Text",
+              "newParameterName": "text"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          },
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": false
+    }
+  },
+  {
+    "name": "function_consume_on_sap_self_consolidationselection_type",
+    "title": "function_Consume_on_sap_self_consolidationselection_type",
+    "description": "OData bound function: Consume on entity SAP__self.ConsolidationSelection_Type in the sap_self service. Returns: Collection(SAP__self.ConsolidationSelectionConsumeResult_Type)",
+    "odataType": {
+      "entitySet": {
+        "name": "ConsolidationSelection",
+        "operation": {
+          "name": "Consume",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "ConsolidationVersion",
+              "newParameterName": "consolidationversion"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "FiscalPeriod",
+              "newParameterName": "fiscalperiod"
+            },
+            {
+              "name": "FinSelectionResolutionType",
+              "newParameterName": "finselectionresolutiontype"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "ConsolidationSelection",
+            "newParameterName": "consolidationselection"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    },
+    "annotations": {
+      "readOnlyHint": true
+    }
+  }
+]

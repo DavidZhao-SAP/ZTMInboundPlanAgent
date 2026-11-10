@@ -1,0 +1,15 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: inbound-transport-planning-1cf11
+  version: "1.0.0"
+  description: Inbound Transportation Planning Agent — AI-powered end-to-end inbound ocean freight planning in SAP S/4HANA TM with instruction-based and document-based mass planning modes.
+
+assets:
+  - ref: ./assets/inbound-transportation-planning-agent/asset.yaml
+  - ref: ./assets/sap-s4-ce-freightunit-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-ce-freightbooking-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-ce-freightagreement-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-ce-consolidationselection-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-ce-freightorder-0001-mcp-server/asset.yaml
